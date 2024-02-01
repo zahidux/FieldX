@@ -8,6 +8,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [navState, setNavState] = useState(false);
 
   const onNavScroll = () => {
     if (window.scrollY > 40) {
@@ -29,7 +30,7 @@ const Navbar = () => {
       <nav className="mx-12 md:mx-28 my-5">
         <div className="md:flex justify-between items-center">
           {/* Navbar Logo */}
-          <Link to="/" className="">
+          <Link data-aos="fade-down" to="/" className="">
             <img className="w-[125px]" src={logo} alt="logo" />
           </Link>
 

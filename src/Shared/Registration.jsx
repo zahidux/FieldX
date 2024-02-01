@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Registration = () => {
   const { signUpUser, profileUpdate } = useContext(AuthContext);
@@ -29,18 +30,18 @@ const Registration = () => {
       userRole,
       agree,
     };
-    console.log(user);
+    // console.log(user);
 
     signUpUser(email, password)
       .then((result) => {
         navigate("/dashboard/region");
         profileUpdate(result.user, name);
         const currentUser = result.user;
-        console.log(currentUser);
+        // console.log(currentUser);
         from.reset();
       })
       .then((error) => {
-        console.log(error);
+        // console.log(error);
       });
     //password validation
     if ((password) => 6) {
@@ -55,7 +56,14 @@ const Registration = () => {
 
   return (
     <div className="bgImg flex items-center justify-center py-12 md:py-28 rounded-3xl">
-      <div className="bg-white pt-10 md:pt-20 px-10 md:px-52 pb-[50px] md:pb-[130px] mt-36 md:mt-24 rounded-3xl">
+      {/* page title */}
+      <Helmet>
+        <title>FiledX - Registration</title>
+      </Helmet>
+      <div
+        data-aos="fade-up"
+        className="bg-white pt-10 md:pt-20 px-10 md:px-52 pb-[50px] md:pb-[130px] mt-36 md:mt-24 rounded-3xl"
+      >
         <h2 className="text-2xl md:text-5xl font-bold text-[#0B141F] text-center">
           Create Account
         </h2>

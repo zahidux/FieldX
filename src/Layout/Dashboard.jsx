@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   if (isAnimationVisible) {
     return (
-      <div className="w-full h-screen flex justify-center items-center">
+      <div className="w-full h-screen md:flex justify-center items-center">
         Loading
       </div>
     );
@@ -41,9 +41,9 @@ const Dashboard = () => {
         <DashNavItems />
 
         {/* Outlet */}
-        <main className="flex-1 w-full duration-300 z-10 bg-[#F2F2F5]">
-          <div className="bg-white py-4 pr-5 flex items-end justify-end">
-            <div className="flex items-center gap-2">
+        <main className="md:flex-1 w-full duration-300 z-10 bg-[#F2F2F5]">
+          <div className="bg-white py-4 pr-5 flex md:items-end justify-end">
+            <div className="md:flex items-center gap-2">
               <img
                 className="w-10 h-10 object-cover rounded-full"
                 src={user?.photoURL !== null ? user.photoURL : avata}

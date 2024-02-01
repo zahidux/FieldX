@@ -20,7 +20,7 @@ const CreateRegion = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         Swal.fire("Region Added Successfully");
         navigate("/dashboard/regionlist");
       });
@@ -53,7 +53,7 @@ const CreateRegion = () => {
           </div>
         </div>
 
-        <div className="w-full h-full flex flex-col items-center justify-start rounded-xl">
+        <div className="md:w-full h-full md:flex flex-col items-center justify-start rounded-xl">
           <div className="bg-white flex flex-col w-[475px] p-10 rounded-xl my-6">
             <label htmlFor="region" className="text-gray mb-2">
               Region
@@ -63,13 +63,13 @@ const CreateRegion = () => {
               type="text"
               placeholder="Type region"
               onChange={(e) => setRegion(e.target.value)}
-              className="w-full border border-gray/50 rounded-lg outline-none py-3 px-2 placeholder:text-gray"
+              className="md:w-full border border-gray/50 rounded-lg outline-none py-3 px-2 placeholder:text-gray"
             />
 
             <button
               onClick={handleRegion}
               to="/"
-              className="bg-dark text-white py-[10px] px-4 ml-auto mt-14 w-fit gap-1 rounded-xl"
+              className="bg-dark text-white py-[10px] px-4 md:ml-auto mt-14 w-fit gap-1 rounded-xl"
             >
               Add Region
             </button>

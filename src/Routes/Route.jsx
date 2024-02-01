@@ -10,6 +10,7 @@ import Area from "../Pages/Dashboard/Area";
 import CreateArea from "../Pages/Dashboard/CreateArea";
 import RegionList from "../Pages/Dashboard/RegionList";
 import AreaList from "../Pages/Dashboard/AreaList";
+import P404 from "../components/404";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
         element: <AreaList />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <P404 />,
   },
 ]);
 

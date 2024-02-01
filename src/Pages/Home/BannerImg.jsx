@@ -4,7 +4,10 @@ import bannerImg2 from "../../assets/phone 1.png";
 
 const BannerImg = () => {
   return (
-    <section className="grid justify-center border-b-2 solid border-[#E1E1E1] pb-12 md:pb-24 mx-8">
+    <section
+      data-aos="fade-up"
+      className="grid justify-center border-b-2 solid border-[#E1E1E1] pb-12 md:pb-24 mx-8"
+    >
       <img
         className="z-10 -mt-56 md:-mt-64"
         src={bannerImg1}

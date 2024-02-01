@@ -8,15 +8,28 @@ import treva from "../../assets/Relay/Treva.png";
 const Relay = () => {
   return (
     <section className="my-16 md:my-36 mx-12 md:mx-32">
-      <h2 className="text-2xl md:text-3xl text-[#0052CC] font-semibold mb-8 md:mb-16 text-center">
+      <h2
+        data-aos="fade-up"
+        className="text-2xl md:text-3xl text-[#0052CC] font-semibold mb-8 md:mb-16 text-center"
+      >
         5,000+ high-impact teams rely on Fieldx
       </h2>
       <div className="grid md:flex justify-center mx-auto items-center gap-8 md:gap-20">
-        <img src={aven} alt="aven" />
-        <img className="my-8 md:my-0" src={amara} alt="amara" />
-        <img src={circle} alt="circle" />
-        <img className="my-8 md:my-0" src={kyan} alt="kyan" />
-        <img src={treva} alt="treva" />
+        <img data-aos="flip-left" src={aven} alt="aven" />
+        <img
+          data-aos="flip-right"
+          className="my-8 md:my-0"
+          src={amara}
+          alt="amara"
+        />
+        <img data-aos="flip-left" src={circle} alt="circle" />
+        <img
+          data-aos="flip-right"
+          className="my-8 md:my-0"
+          src={kyan}
+          alt="kyan"
+        />
+        <img data-aos="flip-left" src={treva} alt="treva" />
       </div>
     </section>
   );

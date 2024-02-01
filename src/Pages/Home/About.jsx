@@ -14,7 +14,10 @@ const About = () => {
     <section className="px-8 md:px-28 pt-16 md:pt-40 bgImg">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center">
         <div className=" bg-[#F1F6FF] rounded-[32px] h-[486px] md:w-[440px] grid items-center md:mx-auto mx-10">
-          <div className="flex justify-center -mt-20 md:-mt-20 ">
+          <div
+            data-aos="zoom-in-down"
+            className="flex justify-center -mt-20 md:-mt-20 "
+          >
             <img
               className="w-[220px] md:w-[297px]"
               src={orderDelivery}
@@ -22,10 +25,13 @@ const About = () => {
             />
           </div>
           <div className="flex  md:gap-8">
-            <div className="w-[220px] md:w-[284px] -ml-12 -mt-2 ">
+            <div
+              data-aos="fade-up"
+              className="w-[220px] md:w-[284px] -ml-12 -mt-2 "
+            >
               <img className="" src={topSelling} alt="Top Selling" />
             </div>
-            <div className="-mr-8">
+            <div data-aos="fade-left" className="-mr-8">
               <img
                 className="w-[200px] md:w-[247px] h-[161px]"
                 src={avg}
@@ -34,7 +40,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mt-10 md:mt-0">
+        <div data-aos="fade-left" className="w-full mt-10 md:mt-0">
           <p className="text-xl font-semibold text-[#0052CC] text-center md:text-start">
             About Us
           </p>
@@ -64,7 +70,7 @@ const About = () => {
         </div>
       </div>
       <div className="md:flex gap-36 justify-center items-center text-center mt-20 md:mt-40 pb-16 md:pb-32">
-        <div className="text-center my-5 md:my-5">
+        <div data-aos="flip-left" className="text-center my-5 md:my-5">
           <div className=" flex justify-center">
             <img
               className="w-[30px] md:w-100%"
@@ -79,7 +85,7 @@ const About = () => {
             Platforms Created
           </p>
         </div>
-        <div className="my-5 md:my-5">
+        <div data-aos="flip-right" className="my-5 md:my-5">
           <div className=" flex justify-center my-5 md:my-0">
             <img className="w-[30px] md:w-100%" src={people} alt="people" />
           </div>
@@ -90,7 +96,7 @@ const About = () => {
             Total Users
           </p>
         </div>
-        <div className="my-5 md:my-5">
+        <div data-aos="flip-right" className="my-5 md:my-5">
           <div className=" flex justify-center">
             <img className="w-[30px] md:w-100%" src={user} alt="user" />
           </div>
@@ -101,7 +107,7 @@ const About = () => {
             Total Clients
           </p>
         </div>
-        <div>
+        <div data-aos="flip-right">
           <div className=" flex justify-center">
             <img className="w-[30px] md:w-100%" src={cup} alt="cup" />
           </div>

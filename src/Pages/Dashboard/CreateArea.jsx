@@ -10,7 +10,7 @@ const CreateArea = () => {
   const navigate = useNavigate();
 
   const handleArea = () => {
-    console.log(region, area);
+    // console.log(region, area);
     const areaInfo = { region, area };
 
     fetch("http://localhost:5000/area", {
@@ -22,7 +22,7 @@ const CreateArea = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         Swal.fire("Area Added Successfully");
         navigate("/dashboard/arealist");
       });
@@ -67,7 +67,15 @@ const CreateArea = () => {
             >
               <option value="">Select region</option>
               <option value="Dhaka">Dhaka</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Rajshahi">Rajshahi</option>
               <option value="Narail">Narail</option>
+              <option value="Jessore">Jessore</option>
+              <option value="Mymensingh">Mymensingh</option>
+              <option value="Cox's Bazar">Cox's Bazar</option>
+              <option value="Gazipur">Gazipur</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Tangail">Tangail</option>
             </select>
 
             <label htmlFor="area" className="text-dark mb-1 mt-5">
@@ -78,13 +86,13 @@ const CreateArea = () => {
               type="text"
               placeholder="Type area"
               onChange={(e) => setArea(e.target.value)}
-              className="w-full border border-gray/50 rounded-lg outline-none py-3 px-2 placeholder:text-gray"
+              className="md:w-full border border-gray/50 rounded-lg outline-none py-3 px-2 placeholder:text-gray"
             />
 
             <button
               onClick={handleArea}
               to="/"
-              className="bg-dark text-white py-[10px] px-4 ml-auto mt-14 w-fit gap-1 rounded-xl"
+              className="bg-dark text-white py-[10px] px-4 md:ml-auto mt-14 w-fit gap-1 rounded-xl"
             >
               Add Region
             </button>
