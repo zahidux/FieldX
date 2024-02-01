@@ -23,7 +23,7 @@ const Registration = () => {
 
     signUpUser(email, password)
       .then((result) => {
-        navigate("/menu");
+        navigate("/dashboard/region");
         profileUpdate(result.user, name);
         const currentUser = result.user;
         console.log(currentUser);

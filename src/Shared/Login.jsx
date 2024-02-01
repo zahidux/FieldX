@@ -18,7 +18,7 @@ const Login = () => {
       .then((result) => {
         profileUpdate(result.user);
         const currentUser = result.user;
-        navigate("/menu");
+        navigate("/dashboard/region");
         from.reset("");
         Swal.fire("User Login Successfully");
       })
