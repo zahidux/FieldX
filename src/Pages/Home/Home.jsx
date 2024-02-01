@@ -4,7 +4,7 @@ import BannerImg from "./BannerImg";
 import Features from "./Features";
 import RelayFieldX from "./RelayFieldX";
 import About from "./About";
-import FAQ from "./FAQ/FAQ";
+import Faqs from "./FAQ/Faqs";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       <BannerImg />
       <Features />
       <About />
-      <FAQ />
+      <Faqs />
       <RelayFieldX />
     </div>
   );

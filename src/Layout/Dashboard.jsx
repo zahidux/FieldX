@@ -4,11 +4,16 @@ import DashNavItems from "../components/DashComponents/DashNavItems";
 
 import StayTop from "../components/StayTop";
 import "react-tooltip/dist/react-tooltip.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
+import { AuthContext } from "../Provider/AuthProvider";
+import avata from "../assets/avata.jpg";
 
 const Dashboard = () => {
+  const { user } = useContext(AuthContext);
+  // console.log(user.photoURL);
+
   const [isAnimationVisible, setIsAnimationVisible] = useState(false);
 
   useEffect(() => {
@@ -41,12 +46,12 @@ const Dashboard = () => {
             <div className="flex items-center gap-2">
               <img
                 className="w-10 h-10 object-cover rounded-full"
-                src="https://fiverr-res.cloudinary.com/image/upload/t_profile_original,q_auto,f_auto/v1/attachments/profile/photo/2ad1f54716df5d59667877d07d039551-1664788852632/c28dea6e-85a7-45b9-8b41-79d11b6c2cb2.jpg"
+                src={user?.photoURL !== null ? user.photoURL : avata}
                 alt=""
               />
 
               <p className="flex items-center text-sm gap-2 text-dark">
-                Henry <IoIosArrowDown />
+                {user?.displayName} <IoIosArrowDown />
               </p>
             </div>
           </div>

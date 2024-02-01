@@ -5,14 +5,15 @@ import { GrLocation } from "react-icons/gr";
 
 // image
 import logo from "../../assets/FieldX.svg";
+import { Link } from "react-router-dom";
 
 const DashNavItems = () => {
   return (
     <aside className="sticky top-0 duration-300 h-screen z-20">
       <div className="bg-white h-full w-auto md:w-[250px] py-2 px-4">
-        <div className="">
+        <Link to={"/"}>
           <img className="mx-auto" src={logo} alt="" />
-        </div>
+        </Link>
 
         <p className="text-gray uppercase mt-8">Menu</p>
         <ul className="mt-6 flex items-start gap-3">

@@ -6,7 +6,7 @@ import linkedinImg from "../assets/Footer/linkedin.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#00193D] pt-20 pb-16 ">
+    <footer className="bg-[#00193D] pt-10 md:pt-20 pb-16 px-3 ">
       <div className="grid justify-center">
         <img src={logo} alt="logo" />
       </div>
@@ -14,13 +14,13 @@ const Footer = () => {
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br />
         accusantium doloremque laudantium, totam rem aperiam eaque.
       </p>
-      <div className="flex justify-center gap-10 mb-20">
+      <div className="flex justify-center gap-5 md:gap-10 mb-10 md:mb-20">
         <img src={twitterImg} alt="Twitter" />
         <img className="linkedin" src={linkedinImg} alt="Linkedin" />
         <img src={facebookImg} alt="Facebook" />
       </div>
-      <hr className="w-[1216px] mx-auto text-slate-900" />
-      <div className="text-[18px] font-bold text-white text-center mt-10 ">
+      <hr className="w-full mx-auto text-slate-900" />
+      <div className="text-[18px] font-bold text-white text-center mt-5 md:mt-10 ">
         <p>
           © All rights reserve by<span className=""> MAAC</span>
         </p>
